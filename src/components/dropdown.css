@@ -1,0 +1,51 @@
+/* Updated CSS */
+
+.drop-down {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    z-index: 10;
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0px 50px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    display: flex;
+    flex-direction: column; /* Make options appear one below the other */
+  }
+  
+  .industries:hover .drop-down {
+    opacity: 1;
+    transform: translateY(0);
+    text-decoration: underline;
+
+  }
+  
+  /* Hover effect for dropdown items */
+  .drop-down p {
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .drop-down p:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+    animation: fadeIn 0.5s; /* Keyframe animation */
+  }
+  
+  /* Keyframe animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
